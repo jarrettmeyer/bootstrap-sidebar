@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "declaration": true,
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "outDir": "__temp",
+        "removeComments": false,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "target": "ES2018",
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "__temp",
+        "dist",
+        "node_modules"
+    ]
+}
