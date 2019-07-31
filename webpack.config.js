@@ -28,7 +28,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: "sidebar-[chunk:8].js",
+        filename: "sidebar-bundle.js",
         path: path.resolve(__dirname, "dist")
     },
     performance: {

@@ -1,0 +1,16 @@
+@import "./vars";
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: @overlay-z-index;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
