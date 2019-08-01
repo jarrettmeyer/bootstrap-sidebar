@@ -8,13 +8,27 @@ import "./styles/index.less";
 $(() => {
 
     $("#show-sidebar").on("click", () => {
-        $("#sidebar").toggleClass("active");
-        $(".overlay").toggleClass("active");
+        showSidebar();
     });
 
     $("#dismiss-sidebar").on("click", () => {
-        $("#sidebar").toggleClass("active");
-        $(".overlay").toggleClass("active");
+        dismissSidebar();
     });
+
+    $("#sidebar-overlay").on("click", () => {
+        dismissSidebar();
+    });
+
+    function dismissSidebar() {
+        $("#sidebar").removeClass("active");
+        $("#sidebar-overlay").removeClass("active");
+        $('a[aria-expanded="true"]').attr("aria-expanded", "false");
+        $("ul.collapse").removeClass("show");
+    }
+
+    function showSidebar() {
+        $("#sidebar").addClass("active");
+        $("#sidebar-overlay").addClass("active");
+    }
 
 });
